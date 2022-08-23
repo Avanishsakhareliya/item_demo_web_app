@@ -43,6 +43,12 @@ function CardIndex() {
         const itemData=await axios.post(url, itemInfo)
         console.log("itemData",itemData)
         if(itemData.status===200){
+            setCardInfo({
+                itemName: "",
+                itemDesc: "",
+                itemPrice: "",
+                itemImage: ""
+            })
             alert('success Card added')
             setItemFlage(true)
         }else{
